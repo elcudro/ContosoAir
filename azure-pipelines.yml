@@ -7,13 +7,8 @@ trigger:
 - master
 
 pool:
-  #vmImage: ubuntu-latest
-  pool:
-  name: Azure Pipelines
-  demands:
-  - npm
-  - node.js
-
+  vmImage: ubuntu-latest
+  
 steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirecotory)/Templates'
